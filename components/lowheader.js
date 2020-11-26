@@ -4,7 +4,7 @@ import Head from "next/head";
 import { Button, Container, Row, Col } from "react-bootstrap";
 
 const style = {
-  backgroundColor: "green",
+  //   backgroundColor: "green",
 };
 
 const LowHeader = () => (
@@ -13,22 +13,87 @@ const LowHeader = () => (
       <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet" />
     </Head>
     <Container fluid style={style}>
-      <Row>
-        <Col></Col>
-      </Row>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        width={48}
-        height={48}
-      >
-        <image
-          width={48}
-          height={48}
-          xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABI0lEQVRo3u2WvQrCMBhFj7oLPotDfTMXwTj6SOLk4OtInRzrYANa09Kkf1f8LmSwla/nJFUuWCyWv80OyHqYk5WzRs0BKIA7sOkwZw3cylnHseBd+UC/UiXe4f1ysUPmCQ9+VD4vgVOkxBo4A6vK9SKBJylbPncu5iRCO18A+7Hgu0jIwKdIyMHHSMjCt5GQh/dxAci8XNXrbmrYuoROQn7nYySk4Ju6kKP9ayPbhd5Pom7nJbpQTvNJuJp7Gd8/8Lrv9pouNcJn8r9W60JTw6dIyMHHSMjCt5GQh/dxAcgc60JaElLw1oWwLpQW60JTw3eRkIFPkZCDj5GQhW8jIQ/v4wKQOdaFtCTk4ZskfgY+JDEY/GJAgSswAy68yp/FYhkgT/9uXq3Dy/YsAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTEwLTMwVDA3OjU1OjI1KzAwOjAwwHFPtAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0xMC0zMFQwNzo1NToyNSswMDowMLEs9wgAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC"
-          data-name="Group 17"
-        />
-      </svg>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Container>
+          <a className="navbar-brand" href="#">
+            Navbar
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <a className="nav-link" href="#">
+                  Home <span className="sr-only">(current)</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Link
+                </a>
+              </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a className="dropdown-item" href="#">
+                    Action
+                  </a>
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
+                  <div className="dropdown-divider" />
+                  <a className="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </div>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link disabled"
+                  href="#"
+                  tabIndex={-1}
+                  aria-disabled="true"
+                >
+                  Disabled
+                </a>
+              </li>
+            </ul>
+            <form className="form-inline my-2 my-lg-0">
+              <input
+                className="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                className="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </Container>
+      </nav>
     </Container>
   </div>
 );
