@@ -27,41 +27,43 @@ const Header = () => (
     </Head>
     <Container fluid style={style} className="justufy-content-center">
       <Row>
-        <Col></Col>
-        <Col xs={10}>
-          <Nav
-            className="justify-content-end"
-            activeKey="/home"
-            style={{ padding: "5px" }}
-          >
-            <Nav.Item>
-              <Nav.Link href="/home" style={icon}>
-                <FaPhoneAlt />
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="link-1" style={icon}>
-                <FaFacebookF />
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="link-2" style={icon}>
-                <FaInstagram />
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="link-3" style={icon}>
-                <FaTwitter />
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="link-4" style={icon}>
-                <FaTelegramPlane />
-              </Nav.Link>
-            </Nav.Item>
-          </Nav>
+        {/* <Col></Col> */}
+        <Col>
+          <Container>
+            <Nav
+              className="justify-content-end"
+              activeKey="/home"
+              style={{ padding: "5px" }}
+            >
+              <Nav.Item>
+                <Nav.Link href="/home" style={icon}>
+                  <FaPhoneAlt />
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="link-1" style={icon}>
+                  <FaFacebookF />
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="link-2" style={icon}>
+                  <FaInstagram />
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="link-3" style={icon}>
+                  <FaTwitter />
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="link-4" style={icon}>
+                  <FaTelegramPlane />
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </Container>
         </Col>
-        <Col></Col>
+        {/* <Col></Col> */}
       </Row>
     </Container>
   </div>
