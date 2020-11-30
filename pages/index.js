@@ -1,28 +1,44 @@
+import React from "react";
 import Link from "next/link";
-
-const style = {
-  backgroundColor: "#4CAF50",
-  border: "none",
-  color: "white",
-  padding: "10px 10px",
-  textAlign: "center",
-  textDecoration: "none",
-  display: "inline-block",
-  fontSize: "16px",
-  margin: "4px 2px",
-  cursor: "pointer",
-};
+import Head from "next/Head";
+import { Button, Container, Row, Col } from "react-bootstrap";
+import { FaSearch } from "react-icons/fa";
+import FirstSlider from "./firstSlider";
 
 const Index = () => (
   <div>
-    {/* <OnHeader />
-  <Header /> */}
-    <h1>Hello Index</h1>
-
-    <style jsx>{``}</style>
+    <Head>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charset="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
+    </Head>
+    <Container>
+      <div style={box}>
+        <FirstSlider />
+      </div>
+    </Container>
+    <style jsx>{`
+      :global(body) {
+        margin: 0;
+        padding: 0;
+        font-family: "Sukhumvit Set", sans-serif;
+        background-color: ##f8f9fb;
+      }
+    `}</style>
   </div>
 );
 
-// export default History;
+const box = {
+  maxWidth: "100%",
+  padding: "1rem",
+};
 
 export default Index;
