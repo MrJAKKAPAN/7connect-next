@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-// import HeadLink from "../headLink";
 import { Button, Container, Row, Col, Nav } from "react-bootstrap";
 import {
   FaPhoneAlt,
@@ -10,15 +9,6 @@ import {
   FaTwitter,
   FaTelegramPlane,
 } from "react-icons/fa";
-
-const style = {
-  backgroundColor: "black",
-  color: "white",
-  float: "right",
-};
-const icon = {
-  color: "white",
-};
 
 const Header = () => (
   <div>
@@ -63,10 +53,18 @@ const Header = () => (
             </Nav>
           </Container>
         </Col>
-        {/* <Col></Col> */}
       </Row>
     </Container>
   </div>
 );
+
+const style = {
+  backgroundColor: "black",
+  color: "white",
+  float: "right",
+};
+const icon = {
+  color: "white",
+};
 
 export default Header;

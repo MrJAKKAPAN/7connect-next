@@ -2,100 +2,80 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { Button, Container, Row, Col } from "react-bootstrap";
-
-const style = {
-  //   backgroundColor: "green",
-};
+import { FaSearch } from "react-icons/fa";
 
 const LowHeader = () => (
   <div>
     <Head>
       <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet" />
     </Head>
-    <Container fluid style={style}>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Container>
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Home <span className="sr-only">(current)</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                  <div className="dropdown-divider" />
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </div>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link disabled"
-                  href="#"
-                  tabIndex={-1}
-                  aria-disabled="true"
-                >
-                  Disabled
-                </a>
-              </li>
-            </ul>
-            <form className="form-inline my-2 my-lg-0">
-              <input
-                className="form-control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button
-                className="btn btn-outline-success my-2 my-sm-0"
-                type="submit"
-              >
-                Search
-              </button>
-            </form>
-          </div>
-        </Container>
-      </nav>
-    </Container>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Container>
+        <a className="navbar-brand" href="#">
+          <img
+            src="/image/logo.png"
+            className="d-inline-block align-top"
+            alt="7Connect"
+          />
+        </a>
+        <div className=" navbar-toggleable-md " id="navbarResponsive">
+          <ul className="nav justify-content-end">
+            <li className="nav-item">
+              <a className="nav-link active" href="#" style={fontColor}>
+                หน้าแรก
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                สินค้า
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                การติดตั้ง
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link active" href="#">
+                เกี่ยวกับเรา
+              </a>
+            </li>
+            <li className="nav-item Search">
+              <a className="nav-link active" href="#" style={fontColor}>
+                <FaSearch />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </Container>
+    </nav>
+
+    <style jsx>{`
+      :global(body) {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: "Sukhumvit Set", sans-serif;
+      }
+      .Search {
+        padding-left: 10px;
+      }
+      li {
+        font-size: 15px;
+        font-weight: bolder;
+      }
+      a {
+        color: #494a4f;
+      }
+    `}</style>
   </div>
 );
+
+const bg = {
+  backgroundColor: "#F8F9FA",
+};
+const fontColor = {
+  color: "#E51A1E",
+};
 
 export default LowHeader;
