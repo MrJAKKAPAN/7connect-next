@@ -19,7 +19,6 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Component {...pageProps} />
-      {/* <style jsx>{``}</style> */}
     </Layout>
   );
 }

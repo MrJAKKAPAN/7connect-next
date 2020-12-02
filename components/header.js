@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { Button, Container, Row, Col, Nav } from "react-bootstrap";
+import styled from "styled-components";
 import {
   FaPhoneAlt,
   FaFacebookF,
@@ -17,7 +18,6 @@ const Header = () => (
     </Head>
     <Container fluid style={style} className="justufy-content-center">
       <Row>
-        {/* <Col></Col> */}
         <Col>
           <Container>
             <Nav
@@ -27,27 +27,37 @@ const Header = () => (
             >
               <Nav.Item>
                 <Nav.Link href="/home" style={icon}>
-                  <FaPhoneAlt />
+                  <Hovers>
+                    <FaPhoneAlt className="hover-icon" />
+                  </Hovers>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-1" style={icon}>
-                  <FaFacebookF />
+                  <Hovers>
+                    <FaFacebookF className="hover-icon" />
+                  </Hovers>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-2" style={icon}>
-                  <FaInstagram />
+                  <Hovers>
+                    <FaInstagram className="hover-icon" />
+                  </Hovers>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-3" style={icon}>
-                  <FaTwitter />
+                  <Hovers>
+                    <FaTwitter className="hover-icon" />
+                  </Hovers>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-4" style={icon}>
-                  <FaTelegramPlane />
+                  <Hovers>
+                    <FaTelegramPlane className="hover-icon" />
+                  </Hovers>
                 </Nav.Link>
               </Nav.Item>
             </Nav>
@@ -66,5 +76,11 @@ const style = {
 const icon = {
   color: "white",
 };
+const Hovers = styled.div`
+&:hover .hover-icon {
+  color:#E51A1E;
+}
+  }
+`;
 
 export default Header;

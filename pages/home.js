@@ -3,11 +3,12 @@ import Link from "next/link";
 import Head from "next/head";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
+import SecondSlider from "./secondSlider";
 
 const Home = () => (
   <div>
     <Container>
-      <h1>555555</h1>
+      <SecondSlider />
     </Container>
   </div>
 );
