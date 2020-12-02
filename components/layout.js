@@ -7,7 +7,7 @@ const layout = ({ children }) => (
     <Header />
     <Nav />
     {children}
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 export default layout;

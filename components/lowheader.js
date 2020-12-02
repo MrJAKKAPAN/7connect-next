@@ -3,6 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
+import styled from "styled-components";
 
 const LowHeader = () => (
   <div>
@@ -21,23 +22,31 @@ const LowHeader = () => (
         <div className=" navbar-toggleable-md " id="navbarResponsive">
           <ul className="nav justify-content-end">
             <li className="nav-item">
-              <a className="nav-link active" href="#" style={fontColor}>
-                หน้าแรก
+              <a className="nav-link active" href="#">
+                <Hovers>
+                  <span className="hover-icon ">หน้าแรก</span>
+                </Hovers>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                สินค้า
+                <Hovers>
+                  <span className="hover-icon ">สินค้า</span>
+                </Hovers>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                การติดตั้ง
+                <Hovers>
+                  <span className="hover-icon ">การติดตั้ง</span>
+                </Hovers>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link active" href="#">
-                เกี่ยวกับเรา
+                <Hovers>
+                  <span className="hover-icon ">เกี่ยวกับเรา</span>
+                </Hovers>
               </a>
             </li>
             <li className="nav-item Search">
@@ -77,5 +86,12 @@ const bg = {
 const fontColor = {
   color: "#E51A1E",
 };
+
+const Hovers = styled.div`
+&:hover .hover-icon {
+  color:#E51A1E;
+}
+  }
+`;
 
 export default LowHeader;
