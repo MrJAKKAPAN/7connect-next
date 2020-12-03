@@ -7,9 +7,9 @@ import SecondSlider from "./secondSlider";
 
 const Home = () => (
   <div>
-    <Container>
-      <SecondSlider />
-    </Container>
+    {/* <Container> */}
+    <SecondSlider />
+    {/* </Container> */}
   </div>
 );
 

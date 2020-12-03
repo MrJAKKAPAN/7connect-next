@@ -20,11 +20,11 @@ const Index = () => (
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
     </Head>
-    <Container>
-      <div style={box}>
-        <FirstSlider />
-      </div>
-    </Container>
+    {/* <Container> */}
+    <div style={box}>
+      <FirstSlider />
+    </div>
+    {/* </Container> */}
     <style jsx>{`
       :global(body) {
         margin: 0;
@@ -38,7 +38,7 @@ const Index = () => (
 
 const box = {
   maxWidth: "100%",
-  padding: "1rem",
+  // padding: "1rem",
 };
 
 export default Index;
